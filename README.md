@@ -2,7 +2,7 @@
 
 ![](Header.png)
 
-> The Mad Miners is a platformer game developed on Unity, and the game was inspired by the Super Meat Boy. The game contains everything that you need to create basic platformer game. It is designed so that it is easy to use and does not require any line of code. It also has an ingame level editor.
+> The Mad Miners is a platformer game developed on Unity, and the game was inspired by the Super Meat Boy. The game contains everything that you need to create basic platformer game. It is designed so that it is easy to use and does not require any line of code. It also has a powerful runtime level editor.
 
 
 ## Gameplay
@@ -21,11 +21,9 @@ Windows:
 edit autoexec.bat
 ```
 
-## InGame Editor
+## Runtime Level Editor
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
+> The game has a powerful runtime level editor with layers system. It will allow players to create levels in game. Allowing your gamer community to create levels will not only increase their satisfaction, but it will also save your time. You can also use this level editor to create levels yourself and save them.
 
 ## Adding Content
 
