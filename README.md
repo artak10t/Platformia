@@ -15,24 +15,11 @@ Player can:
 DoubleJump, WallJump, WallStick, WallSlide, CornerGrab, Dash
 ```
 
-Windows:
-
-```sh
-edit autoexec.bat
-```
-
 ## Runtime Level Editor
 
 > The game has a powerful runtime level editor with layers system. It will allow players to create levels in game. Allowing your gamer community to create levels will not only increase their satisfaction, but it will also save your time. You can also use this level editor to create levels yourself and save them.
 
 ## Adding Content
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
 
 ## Meta
 
