@@ -5,12 +5,14 @@
 > The Mad Miners is a platformer game developed on Unity, and the game was inspired by the Super Meat Boy. The game contains everything that you need to create basic platformer game. It is designed so that it is easy to use and does not require any line of code. It also has an ingame level editor.
 
 
-## Installation
+## Gameplay
 
-OS X & Linux:
+[![The Mad Miners - Gameplay](Gameplay.png)](http://www.youtube.com/watch?v=hOIJQ3127k0 "The Mad Miners - Gameplay")
+
+Player can:
 
 ```sh
-npm install my-crazy-module --save
+DoubleJump, WallJump, WallStick, WallSlide, CornerGrab, Dash
 ```
 
 Windows:
