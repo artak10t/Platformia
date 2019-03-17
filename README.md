@@ -21,6 +21,8 @@ DoubleJump, WallJump, WallStick, WallSlide, CornerGrab, Dash
 
 ## :wrench: Adding Content
 
+-
+
 ## :clipboard: Meta
 
 Spartak Gevorgyan – artak10t@gmail.com
