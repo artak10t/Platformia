@@ -16,12 +16,8 @@ DoubleJump, WallJump, WallStick, WallSlide, CornerGrab, Dash
 ```
 
 ## :hammer: Runtime Level Editor
-
+(Editor.png)
 > The game has a powerful runtime level editor with layers system. It will allow players to create levels in game. Allowing your gamer community to create levels will not only increase their satisfaction, but it will also save your time. You can also use this level editor to create levels yourself and save them.
-
-## :wrench: Adding Content
-
--
 
 ## :clipboard: Meta
 
