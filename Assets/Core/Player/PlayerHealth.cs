@@ -51,9 +51,7 @@ public class PlayerHealth : MonoBehaviour {
                 if (health > 0)
                 {
                     Debug.Log("Health: " + health);
-                    Vector2 velocity = SnapToRelative(targetPosition, 90);
-                    Debug.Log(velocity);
-                    _motor.velocity = -(velocity * knockback);
+                    _motor.ForceJump(knockback * _motor.jumpHeight * 10);
                     int rAudio = Random.Range(0, damageAudio.Length);
                     int rDialogue = Random.Range(0, damageDialogue.Length);
                     _bubbleDialogue.ForcePlay(damageDialogue[rDialogue], false, 0, damageAudio[rAudio]);
@@ -71,8 +69,7 @@ public class PlayerHealth : MonoBehaviour {
             }
             else
             {
-                Vector2 velocity = SnapToRelative(targetPosition, 90);
-                _motor.velocity = -(velocity * knockback);
+                _motor.ForceJump(knockback * _motor.jumpHeight * 10);
             }
             if (isAlive)
                 StartCoroutine(CoolDownWait(coolDown, damage, isBuff));
@@ -95,22 +92,5 @@ public class PlayerHealth : MonoBehaviour {
             yield return new WaitForSeconds(0);
         }
         canTakeDamage = true;
-    }
-
-    private Vector2 SnapToRelative(Vector3 targetPosition, float snapAngle)
-    {
-        Vector2 pos = targetPosition - transform.position;
-        float angle = Vector3.Angle(targetPosition, Vector3.up);
-        if (angle < snapAngle / 2.0f)
-            return Vector3.up * targetPosition.magnitude;
-        if (angle > 180.0f - snapAngle / 2.0f)
-            return Vector3.down * targetPosition.magnitude;
-
-        float t = Mathf.Round(angle / snapAngle);
-        float deltaAngle = (t * snapAngle) - angle;
-
-        Vector3 axis = Vector3.Cross(Vector3.up, pos);
-        Quaternion q = Quaternion.AngleAxis(deltaAngle, axis);
-        return q * pos * 100;
     }
 }

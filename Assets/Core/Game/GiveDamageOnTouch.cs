@@ -15,7 +15,7 @@ public class GiveDamageOnTouch : MonoBehaviour {
     public bool changeSpriteAfterDamage = true;
     public Sprite spriteAfterDamage;
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
@@ -37,6 +37,19 @@ public class GiveDamageOnTouch : MonoBehaviour {
                 {
                     changeSpriteAfterDamage = false;
                     gameObject.GetComponent<SpriteRenderer>().sprite = spriteAfterDamage;
+                }
+            }
+            else
+            {
+                Debug.Log("test");
+
+                if (OnFire)
+                {
+                    PlayerHealth.singleton.OnDamage(0, Knockback, transform.position, CoolDown, true);
+                }
+                if (OnAcid)
+                {
+                    PlayerHealth.singleton.OnDamage(0, Knockback, transform.position, CoolDown, true);
                 }
             }
         }

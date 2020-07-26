@@ -33,13 +33,14 @@ public class PlayerBuffs : MonoBehaviour {
         Debug.Log("Buff: Fire - Started");
         onFireEffect.Play();
         onFireNow = true;
-        while (onFireCurrentCircle < onFireCircles)
+        while (onFireCurrentCircle < onFireCircles && onFireNow)
         {
             yield return new WaitForSeconds(onFireFrequency);
             onFireCurrentCircle++;
             if (onFireCurrentCircle >= onFireCircles)
                 break;
-            PlayerHealth.singleton.OnDamage(onFireDamage, 0, Vector2.zero, onFireFrequency, true);
+            if(onFireNow)
+                PlayerHealth.singleton.OnDamage(onFireDamage, 0, Vector2.zero, onFireFrequency, true);
         }
         onFireCurrentCircle = 0;
         onFire = false;
@@ -56,18 +57,14 @@ public class PlayerBuffs : MonoBehaviour {
         }
         set
         {
-            if (value)
+            if (value && value != onFire)
             {
                 onFire = true;
                 onFireCurrentCircle = 0;
                 if (!onFireNow)
                 {
                     StartCoroutine(OnFireTimer());
-                }
-                else
-                {
-                    PlayerHealth.singleton.OnDamage(0, 4, Vector2.zero, onFireFrequency, true);
-                }
+                }         
             }
             else
             {
@@ -90,13 +87,14 @@ public class PlayerBuffs : MonoBehaviour {
         Debug.Log("Buff: Acid - Started");
         onAcidEffect.Play();
         onAcidNow = true;
-        while (onAcidCurrentCircle < onAcidCircles)
+        while (onAcidCurrentCircle < onAcidCircles && onAcidNow)
         {
             yield return new WaitForSeconds(onAcidFrequency);
             onAcidCurrentCircle++;
             if (onAcidCurrentCircle >= onAcidCircles)
                 break;
-            PlayerHealth.singleton.OnDamage(onAcidDamage, 0, Vector2.zero, onAcidFrequency, true);
+            if (onAcidNow)
+                PlayerHealth.singleton.OnDamage(onAcidDamage, 0, Vector2.zero, onAcidFrequency, true);
         }
         onAcidCurrentCircle = 0;
         onAcid = false;
@@ -113,17 +111,13 @@ public class PlayerBuffs : MonoBehaviour {
         }
         set
         {
-            if (value)
+            if (value && value != onAcid)
             {
                 onAcid = true;
                 onAcidCurrentCircle = 0;
                 if (!onAcidNow)
                 {
                     StartCoroutine(OnAcidTimer());
-                }
-                else
-                {
-                    PlayerHealth.singleton.OnDamage(0, 4, Vector2.zero, onAcidFrequency, true);
                 }
             }
             else

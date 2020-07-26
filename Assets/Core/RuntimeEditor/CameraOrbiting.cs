@@ -4,12 +4,12 @@ public class CameraOrbiting : MonoBehaviour
 {
     public float zoomSpeed = 2f;
     public float zoomMin = 5;
-    public float zoomMax = 10;
+    public float zoomMax = 20;
     public float dragSpeed = 6f;
 
     void Update()
     {
-        dragSpeed = GetComponent<Camera>().orthographicSize * 4;
+        dragSpeed = GetComponent<Camera>().orthographicSize * 10;
         if (Input.GetMouseButton(2))
         {
             transform.Translate(-Input.GetAxisRaw("Mouse X") * Time.deltaTime * dragSpeed, -Input.GetAxisRaw("Mouse Y") * Time.deltaTime * dragSpeed, 0);

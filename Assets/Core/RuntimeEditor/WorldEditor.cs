@@ -373,48 +373,48 @@ public class WorldEditor : MonoBehaviour {
         {
             if (Directory.Exists(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt"))
             {
-                if (Directory.Exists(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners"))
+                if (Directory.Exists(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners"))
                 {
-                    if (Directory.Exists(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps"))
+                    if (Directory.Exists(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps"))
                     {
                         if (!getNotification)
                         {
-                            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps" + "\\mapbackup_" + worldName;
+                            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps" + "\\mapbackup_" + worldName;
                             newWorld.SaveToFile(path, getNotification);
                         }
                         else
                         {
-                            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps" + "\\map_" + worldName;
+                            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps" + "\\map_" + worldName;
                             newWorld.SaveToFile(path, getNotification);
                         }
                     }
                     else
                     {
-                        Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps");
+                        Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps");
                         if (!getNotification)
                         {
-                            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps" + "\\mapbackup_" + worldName;
+                            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps" + "\\mapbackup_" + worldName;
                             newWorld.SaveToFile(path, getNotification);
                         }
                         else
                         {
-                            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps" + "\\map_" + worldName;
+                            string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps" + "\\map_" + worldName;
                             newWorld.SaveToFile(path, getNotification);
                         }
                     }
                 }
                 else
                 {
-                    Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners");
-                    Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps");
+                    Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners");
+                    Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps");
                     if (!getNotification)
                     {
-                        string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps" + "\\mapbackup_" + worldName;
+                        string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps" + "\\mapbackup_" + worldName;
                         newWorld.SaveToFile(path, getNotification);
                     }
                     else
                     {
-                        string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps" + "\\map_" + worldName;
+                        string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps" + "\\map_" + worldName;
                         newWorld.SaveToFile(path, getNotification);
                     }
                 }
@@ -422,16 +422,16 @@ public class WorldEditor : MonoBehaviour {
             else
             {
                 Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt");
-                Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners");
-                Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps");
+                Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners");
+                Directory.CreateDirectory(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps");
                 if (!getNotification)
                 {
-                    string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps" + "\\mapbackup_" + worldName;
+                    string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps" + "\\mapbackup_" + worldName;
                     newWorld.SaveToFile(path, getNotification);
                 }
                 else
                 {
-                    string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps" + "\\map_" + worldName;
+                    string path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps" + "\\map_" + worldName;
                     newWorld.SaveToFile(path, getNotification);
                 }
             }
@@ -447,10 +447,10 @@ public class WorldEditor : MonoBehaviour {
         if (worldName != "")
         {
             string path;
-            path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps" + "\\map_" + worldName;
+            path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps" + "\\map_" + worldName;
             if (backup)
             {
-                path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\MadMiners\\Maps" + "\\mapbackup_" + worldName;
+                path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments) + "\\FlavorlessArt\\TheMadMiners\\Maps" + "\\mapbackup_" + worldName;
             }
             if (File.Exists(path))
             {
